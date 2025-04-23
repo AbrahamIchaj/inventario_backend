@@ -9,7 +9,7 @@ dotenv.config();
 import roleRoutes from "./routes/roleRoutes";
 import categoryRoutes from "./routes/categoryRoutes";
 import taxRoutes from "./routes/taxRoutes";
-
+import brandRoutes from "./routes/brandRoutes";
 
 // CORS
 app.use(
@@ -28,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/roles", roleRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/tax", taxRoutes );
+app.use("/api/brand", brandRoutes );
 
 // SERVER
 app.listen(PORT, () => {
