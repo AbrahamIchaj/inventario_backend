@@ -2,12 +2,14 @@ import * as express from "express";
 import * as dotenv from "dotenv";
 import * as cors from "cors";
 
+const app = express();
+const PORT = process.env.PORT || 3001;
 dotenv.config();
 
 import roleRoutes from "./routes/roleRoutes";
+import categoryRoutes from "./routes/categoryRoutes";
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+
 
 // CORS
 app.use(
@@ -22,8 +24,9 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// API'S
+// API'Ss
 app.use("/api/roles", roleRoutes);
+app.use("/api/category", categoryRoutes);
 
 // SERVER
 app.listen(PORT, () => {
