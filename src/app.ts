@@ -29,6 +29,7 @@ app.use("/api/roles", roleRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/tax", taxRoutes );
 app.use("/api/brand", brandRoutes );
+app.use("/api/paymentmethod", paymentmethodRoutes );
 
 // SERVER
 app.listen(PORT, () => {
