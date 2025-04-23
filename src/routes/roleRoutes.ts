@@ -3,11 +3,12 @@ import { RoleController } from '../controllers/RoleController';
 
 const router = Router();
 const roleController = new RoleController();
+const nameController = roleController ;
 
-router.get('/', roleController.getAll.bind(roleController));
-router.get('/:id', roleController.getById.bind(roleController));
-router.post('/', roleController.create.bind(roleController));
-router.put('/:id', roleController.update.bind(roleController));
-router.delete('/:id', roleController.delete.bind(roleController));
+router.get('/', nameController.getAll.bind(nameController));
+router.get('/:id', nameController.getById.bind(nameController));
+router.post('/', nameController.create.bind(nameController));
+router.put('/:id', nameController.update.bind(nameController));
+router.delete('/:id', nameController.delete.bind(nameController));
 
 export default router;
