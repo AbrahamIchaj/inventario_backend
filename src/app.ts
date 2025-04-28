@@ -11,6 +11,7 @@ import categoryRoutes from "./routes/categoryRoutes";
 import taxRoutes from "./routes/taxRoutes";
 import brandRoutes from "./routes/brandRoutes";
 import paymentmethodRoutes from "./routes/paymentmethodRoutes";
+import customerRoutes from "./routes/customerRoutes";
 
 // CORS
 const allowedOrigins = [
@@ -46,6 +47,7 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/tax", taxRoutes);
 app.use("/api/brand", brandRoutes);
 app.use("/api/paymentmethod", paymentmethodRoutes);
+app.use("/api/customer", customerRoutes);
 
 // SERVER
 app.listen(PORT, () => {
