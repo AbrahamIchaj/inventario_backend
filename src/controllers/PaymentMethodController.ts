@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import pool from "../config/database";
 import { IPaymentMethod } from "../models/paymentMethod";
 
-
 export class PaymentMethodController {
   async getAll(req: Request, res: Response) {
     try {
@@ -19,9 +18,10 @@ export class PaymentMethodController {
 
   async getById(req: Request, res: Response) {
     try {
-      const [rows] = await pool.execute("SELECT * FROM metodopago WHERE id_metodo_pago = ?", [
-        req.params.id,
-      ]);
+      const [rows] = await pool.execute(
+        "SELECT * FROM metodopago WHERE id_metodo_pago = ?",
+        [req.params.id]
+      );
       const tax = rows as IPaymentMethod[];
 
       if (tax.length === 0) {
@@ -39,7 +39,7 @@ export class PaymentMethodController {
 
   async create(req: Request, res: Response) {
     try {
-      const { nombre, activo  } = req.body;
+      const { nombre, activo } = req.body;
 
       const [result] = await pool.execute(
         "INSERT INTO metodopago (nombre, activo) VALUES (?,?)",
@@ -62,9 +62,9 @@ export class PaymentMethodController {
   async update(req: Request, res: Response) {
     try {
       const { nombre, activo } = req.body;
-      
+
       const [result] = await pool.execute(
-        "UPDATE metodopago SET nombre = ?, activo = ?, WHERE id_metodo_pago = ?",
+        "UPDATE metodopago SET nombre = ?, activo = ? WHERE id_metodo_pago = ?",
         [nombre, activo, req.params.id]
       );
 
@@ -85,9 +85,10 @@ export class PaymentMethodController {
 
   async delete(req: Request, res: Response) {
     try {
-      const [result] = await pool.execute("DELETE FROM metodopago WHERE id_metodo_pago = ?", [
-        req.params.id,
-      ]);
+      const [result] = await pool.execute(
+        "DELETE FROM metodopago WHERE id_metodo_pago = ?",
+        [req.params.id]
+      );
 
       const resultAsAny = result as any;
       if (resultAsAny.affectedRows === 0) {
