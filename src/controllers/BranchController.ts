@@ -72,7 +72,7 @@ export class BranchController {
 
         if ((userRows as any[]).length === 0) {
           return res.status(400).json({
-            message: "Referenced user does not exist",
+            message: "ID User does not exist",
             error: `User with id ${responsable_id} not found`,
           });
         }
