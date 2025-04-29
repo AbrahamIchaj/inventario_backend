@@ -13,6 +13,7 @@ import brandRoutes from "./routes/brandRoutes";
 import paymentmethodRoutes from "./routes/paymentmethodRoutes";
 import customerRoutes from "./routes/customerRoutes";
 import supplierRoutes from "./routes/supplierRoutes";
+import userRoutes from "./routes/userRoutes";
 
 // CORS
 const allowedOrigins = [
@@ -50,6 +51,7 @@ app.use("/api/brand", brandRoutes);
 app.use("/api/paymentmethod", paymentmethodRoutes);
 app.use("/api/customer", customerRoutes);
 app.use("/api/supplier", supplierRoutes);
+app.use("/api/user", userRoutes);
 
 // SERVER
 app.listen(PORT, () => {
