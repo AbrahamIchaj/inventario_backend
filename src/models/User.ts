@@ -7,5 +7,5 @@ export interface IUser extends RowDataPacket {
   password_hash: string;
   rol_id: number;
   activo: boolean;
-  ultimo_acceso: Date;
+  ultimo_acceso: Date | null;
 }
