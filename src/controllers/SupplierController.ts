@@ -45,13 +45,13 @@ export class SupplierController {
         email,
         direccion,
         ciudad,
-        contactoReferencia,
+        contacto_referencia,
         rfc,
       } = req.body;
 
       const [result] = await pool.execute(
         "INSERT INTO proveedor ( nombre, telefono, email, direccion, ciudad, contacto_referencia, rfc ) VALUES ( ?,?,?,?,?,?,? )",
-        [nombre, telefono, email, direccion, ciudad, contactoReferencia, rfc]
+        [nombre, telefono, email, direccion, ciudad, contacto_referencia, rfc]
       );
 
       res.status(201).json({
@@ -75,7 +75,7 @@ export class SupplierController {
         email,
         direccion,
         ciudad,
-        contactoReferencia,
+        contacto_referencia,
         rfc,
       } = req.body;
 
@@ -87,7 +87,7 @@ export class SupplierController {
           email,
           direccion,
           ciudad,
-          contactoReferencia,
+          contacto_referencia,
           rfc,
           req.params.id,
         ]
