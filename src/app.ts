@@ -22,6 +22,7 @@ import customerRoutes from "./routes/customerRoutes";
 import supplierRoutes from "./routes/supplierRoutes";
 import userRoutes from "./routes/userRoutes";
 import branchRoutes from "./routes/branchRoutes";
+import boxRoutes from "./routes/boxRoutes";
 
 app.use("/api/roles", roleRoutes);
 app.use("/api/category", categoryRoutes);
@@ -32,6 +33,7 @@ app.use("/api/customer", customerRoutes);
 app.use("/api/supplier", supplierRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/branch", branchRoutes);
+app.use("/api/box", boxRoutes);
 
 //SERVER
 app.listen(PORT, () => {
