@@ -94,7 +94,7 @@ export class BoxController {
       } = req.body;
 
       const [result] = await pool.execute(
-        "UPDATE impuesto SET sucursal_id=?, nombre=?, estado=?, saldo_inicial=?, saldo_final=?,  usuario_apertura=?, usuario_cierre=?, fecha_apertura=?, fecha_cierre=? where id_caja=?",
+        "UPDATE caja SET sucursal_id=?, nombre=?, estado=?, saldo_inicial=?, saldo_final=?,  usuario_apertura=?, usuario_cierre=?, fecha_apertura=?, fecha_cierre=? where id_caja=?",
         [
           sucursal_id,
           nombre,
