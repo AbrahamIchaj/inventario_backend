@@ -3,7 +3,6 @@ import * as dotenv from "dotenv";
 import * as cors from "cors";
 import corsOptions from "./utils/cors";
 
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 dotenv.config();
@@ -26,6 +25,7 @@ import branchRoutes from "./routes/branchRoutes";
 import boxRoutes from "./routes/boxRoutes";
 import buyRoutes from "./routes/buyRoutes";
 import productRoutes from "./routes/productRoutes";
+import inventoryMovementRoutes from "./routes/inventoryMovementRoutes";
 
 app.use("/api/roles", roleRoutes);
 app.use("/api/category", categoryRoutes);
@@ -39,6 +39,7 @@ app.use("/api/branch", branchRoutes);
 app.use("/api/box", boxRoutes);
 app.use("/api/buy", buyRoutes);
 app.use("/api/product", productRoutes);
+app.use("/api/inventoryMovement", inventoryMovementRoutes);
 
 //SERVER
 app.listen(PORT, () => {
