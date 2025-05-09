@@ -28,6 +28,7 @@ import productRoutes from "./routes/productRoutes";
 import inventoryMovementRoutes from "./routes/inventoryMovementRoutes";
 import saleDetailRoutes from "./routes/saleDetailRoutes";
 import purchaseDetailRoutes from "./routes/purchaseDetailRoutes";
+import saleRoutes from "./routes/saleRoutes";
 
 app.use("/api/roles", roleRoutes);
 app.use("/api/category", categoryRoutes);
@@ -44,6 +45,7 @@ app.use("/api/product", productRoutes);
 app.use("/api/inventoryMovement", inventoryMovementRoutes);
 app.use("/api/saleDetail", saleDetailRoutes);
 app.use("/api/purchaseDetail", purchaseDetailRoutes);
+app.use("/api/sale", saleRoutes);
 
 //SERVER
 app.listen(PORT, () => {
