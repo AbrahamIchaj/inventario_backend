@@ -20,6 +20,7 @@
     "express": "^4.18.2",
     "inventario_backend": "file:",
     "mysql2": "^3.14.0",
+    "nanoid": "^5.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },

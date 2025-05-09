@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import pool from "../config/database";
 import { IProduct } from "../models/Product";
+import { BarcodeGenerator } from "../utils/barcodeGenerator";
 
 export class ProductController {
   async getAll(req: Request, res: Response) {
@@ -41,6 +42,7 @@ export class ProductController {
     try {
       const {
         codigo_barra,
+        barcodePattern, // New field for custom pattern
         nombre,
         descripcion,
         categoria_id,
@@ -57,6 +59,33 @@ export class ProductController {
         codigo_interno,
       } = req.body;
 
+      // Generate barcode if not provided
+      let finalBarcode = codigo_barra;
+      if (!finalBarcode) {
+        if (
+          barcodePattern &&
+          !BarcodeGenerator.validatePattern(barcodePattern)
+        ) {
+          return res.status(400).json({
+            message:
+              "Invalid barcode pattern. Use only 'A' for letters and 'N' for numbers",
+          });
+        }
+        finalBarcode = await BarcodeGenerator.generateBarcode(barcodePattern);
+      }
+
+      // Check if barcode already exists
+      const [existing] = await pool.execute(
+        "SELECT id_producto FROM producto WHERE codigo_barra = ?",
+        [finalBarcode]
+      );
+
+      if ((existing as any[]).length > 0) {
+        return res.status(400).json({
+          message: "Barcode already exists",
+        });
+      }
+
       const [result] = await pool.execute(
         `INSERT INTO producto (
           codigo_barra, nombre, descripcion, categoria_id, marca_id,
@@ -65,7 +94,7 @@ export class ProductController {
           imagen_url, activo, codigo_interno
         ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)`,
         [
-          codigo_barra,
+          finalBarcode,
           nombre,
           descripcion,
           categoria_id,
@@ -86,6 +115,7 @@ export class ProductController {
       res.status(201).json({
         message: "Product created successfully",
         result,
+        barcode: finalBarcode,
       });
     } catch (error) {
       console.error("Database error:", error);

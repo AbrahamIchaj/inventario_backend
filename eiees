@@ -1,0 +1,119 @@
+[33mcommit 0dc7166c32042751b7974121dd54d2a6080f6235[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Thu May 8 15:53:48 2025 -0600
+
+    CRUD Product
+
+[33mcommit 4cf8984bb9d1f33d206d095dd63cddc602dca848[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Thu May 8 12:56:03 2025 -0600
+
+    CRUD Buy and fix BoxController
+
+[33mcommit 9997d96d4c3266c5ceb1cee5efb4a4132e653c66[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Thu May 8 12:03:55 2025 -0600
+
+    CRUD Box
+
+[33mcommit 8c18ba4ed9ed2981a581d2a8f712dee6f73a427a[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Tue May 6 23:19:27 2025 -0600
+
+    Fix supplier service
+
+[33mcommit 2ed74faf464813b9a4be0a2a27f0084f3beab39d[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 28 23:04:43 2025 -0600
+
+    Update app.ts
+
+[33mcommit e5b13cd6bf45c92a33bf17be69e2064e92150b3a[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 28 22:27:32 2025 -0600
+
+    CRUD Branch
+
+[33mcommit afd31ac55215fa676ec437add7ff600f48e2b3aa[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 28 22:06:41 2025 -0600
+
+    CRUD User, config bCrypt and update .env
+
+[33mcommit a4810c0695f2fc3ac4ecd1143b61b358fc06cd26[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 28 14:28:27 2025 -0600
+
+    CRUD Supplier
+
+[33mcommit 7ea3d808ea662d62f0e4ecc781346fd5bf0dd084[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 28 13:53:01 2025 -0600
+
+    CRUD Customer
+
+[33mcommit 243bdfcbbc67198254bca3867efd82d4ec52509f[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Sun Apr 27 21:28:14 2025 -0600
+
+    Uodates PaymentMethod
+
+[33mcommit ecedaae65941c7d8fb17b7ff79ba61e365df79f3[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Wed Apr 23 16:09:49 2025 -0600
+
+    CRUD PaymentMethod
+
+[33mcommit 44fd9a190a44fdb59bd58888c142f947f5c4793f[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Wed Apr 23 16:09:19 2025 -0600
+
+    CRUD PaymentMethod
+
+[33mcommit ea6ed845175c4d26e827ce252f135dc4368742cf[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Wed Apr 23 14:53:16 2025 -0600
+
+    CRUD Brand
+
+[33mcommit 928a91d26d6d4edd02699665e1c23a0fccc2ea57[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Wed Apr 23 14:18:53 2025 -0600
+
+    CRUD Tax
+
+[33mcommit b07e7395feba26d2282097d68e255f7cb7f13854[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Wed Apr 23 12:33:45 2025 -0600
+
+    CRUD Category
+
+[33mcommit 4b2441759a96ec0d6fb009514600f0e6b67d059a[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Tue Apr 22 23:02:15 2025 -0600
+
+    Update Cors
+
+[33mcommit a7578d5618ce28ab79eba2ad997485ace5781cb8[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Tue Apr 22 19:44:30 2025 -0600
+
+    CRUD Role and configure Server
+
+[33mcommit 92c37e92ef71281e12e584fc8936ca54bfb711e8[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 21 22:08:38 2025 -0600
+
+    base de  datos
+
+[33mcommit 5bca9ec27c2b0afd2378b39fbb795763344efabc[m
+Author: AbrahamIchaj <abrahamichaj95@gmail.com>
+Date:   Mon Apr 21 21:38:24 2025 -0600
+
+    Install Express
+
+[33mcommit ab3a4c24ec0e416a3c92ff75e43464560bf13608[m
+Author: AbrahamIchaj <122321225+AbrahamIchaj@users.noreply.github.com>
+Date:   Mon Apr 21 21:20:55 2025 -0600
+
+    Initial commit
