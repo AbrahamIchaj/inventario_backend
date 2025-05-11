@@ -9,5 +9,6 @@ router.get("/:id", saleController.getById.bind(saleController));
 router.post("/", saleController.create.bind(saleController));
 router.put("/:id", saleController.update.bind(saleController));
 router.post("/:id/cancel", saleController.cancel.bind(saleController));
+router.delete("/:id", saleController.delete.bind(saleController));
 
 export default router;
